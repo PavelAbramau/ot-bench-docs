@@ -1,0 +1,47 @@
+name: Deploy documentation
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Validate generated artifact
+        run: |
+          python - <<'PYCODE'
+          import hashlib, json
+          from pathlib import Path
+          root = Path('site')
+          data = json.loads((root/'site-manifest.json').read_text())
+          assert data['read_only'] and data['chapters'] == 12
+          assert set(p.name for p in root.iterdir()) == set(data['files']) | {'site-manifest.json'}
+          for name, digest in data['files'].items():
+              assert name == Path(name).name
+              assert hashlib.sha256((root/name).read_bytes()).hexdigest() == digest
+          PYCODE
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - uses: actions/deploy-pages@v4
+        id: deployment

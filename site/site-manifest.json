@@ -1,0 +1,25 @@
+{
+  "contract": "otbench.public-documentation.v1",
+  "site_url": "https://pavelabramau.github.io/ot-bench-docs/",
+  "read_only": true,
+  "chapters": 12,
+  "files": {
+    ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "404.html": "f51d8a111740989ed780c5a43ba3179a28cb4a0e056a07bf3b564f12e44d2ee3",
+    "blinding.html": "a53a7ad510da85c6fd052b7f361c2a8bac03d20e98794f484084882a78158e86",
+    "calibration.html": "125e0c38c39c6a2acda9a1da6643f48744207843f66d4ebff07ad654a942148f",
+    "difficulty.html": "0562472579f76b6cee40338ae9f6179c6a940d7cac3d172a123d90a95956f3d8",
+    "getting-started.html": "af4467ff616cca20a66f3b6d1948b5ee4073474ffae7fb65b321df10ac03164f",
+    "index.html": "66d83f7d32651c6d0387e90ae4f87dedb8cf3e62cb45cb4d95eb738794e1a61b",
+    "reproduce.html": "ea9c1d00b6f2a29a743e453491ce1fec8155e4f55532d1c548f4013df8be4622",
+    "robots.txt": "da817e7b0dc5491b6815744a2a0bc6d4e62b9fc32e5ca5bc14f74a0c3c84d1fd",
+    "ruler.html": "2273ab9cbf27b1413f739f75a1138b233a402da8723102c7d277512e94f97ba7",
+    "runner-and-memory.html": "fdfd1c1c22cf0f94a3973086fc71ff98f281ce1cf7a1ebd181c67a66b0f42d3c",
+    "scoring.html": "1fafa79a3d06977bdfa54ad852e9adb1db09d8632319cf4283bcd65ce313183e",
+    "sitemap.xml": "d2beb70c66be99a38136b48051561b8db85367560c030c9f2bab172b98181334",
+    "tasks-and-cues.html": "69f12ffb1a06b542bf7335a43536752e7c07ef1edf04a7ae7d4f43ce32487255",
+    "worlds.html": "ef46de66b5112f19c013d54a5cf18f82e1f643538fc0a880dea848cd4999b45f",
+    "writer.html": "36524a6af5ee7d2ad555fbb84ded46e975b814657bb1d1099f08386b4187801b"
+  },
+  "source_fixture_sha256": "734de2736cbfc5729a37078b8ae507492fc92826374acde12b441012586576da"
+}
